@@ -2,7 +2,7 @@
   "name": "airbnb",
   "version": "1.0.0",
   "description": "Web assignment 1",
-  "main": "3000",
+  "main": "airbnb.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
