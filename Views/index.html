@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AirBNB.com</title>
+   <style>
+     .body{
+    background-color: rgb(230, 248, 248);
+    margin: 10px;
+}
+.cover{
+    overflow: initial;
+    background-image: url('image/bnb.png');
+    background-size: cover;
+    background-position: fixed;
+}
+#header{
+    display: inline-block;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: rgba(56, 51, 51, 0.26);
+    
+   
+}
+
+#header img{
+    float: left;
+    padding: 30px;
+    padding-right: 27%;
+}
+
+#header a{
+    display: block;
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    left: 100px;
+    color: ivory;
+   
+}
+#header a:hover{
+    background-color: rgb(231, 127, 127);
+    color: black;
+    border-radius: 25px;
+}
+
+#header a.a1{
+    float: right;
+}
+
+#header a.a2{
+    float: right;
+}
+
+#header button{
+    border: 2px solid black;
+    color: #f1f1f1;
+    background-color: #168f67;
+    width: 40px;
+    height: 20px;
+   right: 20px;
+
+}
+
+
+#form-1{
+    display: grid;
+    padding: 20px;
+    width: 25%;
+    height: 23%;
+    padding-left: 40%;
+}
+#form-1 label{
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    font-weight: bold;
+}
+#form-1 input[type=text], input[type=number]{
+    size: 25px;
+    width: 320px;
+    height: 25px;
+    padding: 2px;
+}
+
+#form-1 input[type=datetime]{
+    width: 120px;
+    height: 25px;
+}
+
+#form-1 input[type=submit]{
+    border: none;
+    background-color: rgba(255, 8, 0, 0.774);
+    color:white;
+    width: 100px;
+    height: 43px;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+
+#lab3{
+    padding-top: 20px;
+    padding-left: 228px;
+}
+
+
+#lab{
+    display: inline-flex;
+    padding-top: 6px;
+}
+
+
+#h1-tr{
+    text-align: center;
+    color: ivory;
+    padding: 5px;
+    height: 15%;
+    padding-bottom: 25px;
+}
+
+#promo{
+    display: inline-flex;
+    width: 100%;
+    padding: 20px;
+    padding-top: 2px;
+}
+
+#promo img{
+    width: 440px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+#promo figure{
+    display: inline-flex;
+}
+
+#promo figcaption{
+    color: rgb(196, 35, 7);
+    font-size: large;
+}
+
+#text-donate{
+    display: block;
+    padding: 20px;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+#text-donate p{
+    float: right;
+    padding-right: 13%;
+    font-size: 22px;
+    font-style: initial;
+
+}
+
+footer{
+    display: inline-flexbox;
+    background-color:#333333;
+    color: white;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+
+}
+
+#about{
+    padding: 30px;
+    padding-left: 160px;
+}
+
+
+
+#icon-menu{
+    text-align: center;
+    padding: 10px;
+    background-color: #333333;
+    color:white;
+    width: auto;
+  }
+  
+  
+  #last-f{
+      background-color: #333333;
+      text-align: center;
+      color:white;
+      text-decoration: none;
+      padding: 10px;
+  }  
+
+
+/*log in*/
+
+       
+
+   </style>
+    <script src="airbnb.js"></script>
+</head>
+<body>
+
+  <div class="cover">
+
+    <div id="header">
+            <img style="width: 75px; height: 50px;" src="image/logo.png" alt="airbnb.com">
+            <a href="index.html"><h2>Place for everyone</h2></a>
+            <a href="roompage.html"><h2>Explore Near</h2></a>
+            <a href="#"><h2>Online Section</h2></a>
+
+            <a style="float: right;" onclick="btn.style.display='block'"><h2>Sign UP</h2></a>      
+            <a style="float: right;" onclick="modal.style.display='block'"><h2>Log in</h2></a>
+        
+    <div id="show-me">
+
+
+
+      <style>
+            
+            #show-me input[type=email]{
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 4px;
+
+            }
+            #show-me input[type=text]{
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 4px;
+            }
+            #show-me input[type=password] {
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 5px;
+            }
+            
+            
+            
+            /* Set a style for all buttons */
+             #show-me button {
+              background-color: rgb(27, 146, 47);
+              color: white;
+              border: none;
+              cursor: pointer;
+              width: 50%;
+              opacity: 1;
+              height: 35px;
+              
+            }
+            
+             #show-me button:hover {
+              opacity:1;
+            }
+          
+            
+            /* Float cancel and signup buttons and add an equal width */
+            .cancelbtn, .signupbtn {
+              float: left;
+              width: 50%;
+              padding: 3px;
+              border-radius: 15px;
+              height: 30px;
+            }
+            
+            /* Add padding to container elements */
+            .container {
+              padding: 16px;
+            }
+            
+            /* The Modal (background) */
+            #show-me {
+              display: none;
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: #3b6639;
+              padding-top: 50px;
+            }
+            
+            /* Modal Content/Box */
+            .modal-content {
+              background-color: #ffffff;
+              margin: 5% auto 15% auto; /* 5% from the p, 15% from the bottom and centered */
+              border: 1px solid #888;
+              width: 85%; /* Could be more or less, depending on screen size */
+            }
+            
+            /* Style the horizontal ruler */
+            hr {
+              border: 1px solid #221313;
+              margin-bottom: 25px;
+            }
+             
+            /* The Close Button (x) */
+            .close {
+              position: absolute;
+              right: 45px;
+              top: 15px;
+              font-size: 40px;
+              font-weight: bold;
+              color: #e73737;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: #ce271b;
+              cursor: pointer;
+            }
+            
+            /* Clear floats */
+            .clearfix::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+            
+            @media screen and (max-width: 300px) {
+              .cancelbtn, .signupbtn {
+                 width: 50%;
+
+                 
+              }
+            }
+    
+            
+    
+            </style>
+
+            <span onclick="document.getElementById('show-me').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/form-reg" method="POST">
+            <div class="container">
+            <h3 style="text-align: center;">Sign up with <span style="color: rgb(28, 101, 104);">Facebook</span> or <span style="color: rgb(21, 109, 112);">Google</span> </h3>
+            <p style="text-align: center; font-size: 20px;">or</p>
+            <input type="email" placeholder="Email address" id="email" for="email" required><br>
+            <input type="text" placeholder="First name" for="fname"><br>
+            <input type="text" placeholder="Last name" for="lname"><br>
+            <input type="password" placeholder="Create a Pasword" id="password" for="password" required><br>
+            <p style="text-align: center;">We'll send you marketing promotions, speacial offers, inspiration, and policy <br> updates via email.</p>
+            <div class="clearfix">
+                <button type="button" style="background-color: red; padding: 0px; font-size: large;" onclick="document.getElementById('show-me').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" style="font-size:large;" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="log-in" class="modal2" style="display: none;">
+
+      <style>
+         
+          
+         #log-in input[type=email]{
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 4px;
+
+            }
+            #log-in input[type=text]{
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 4px;
+            }
+            #log-in input[type=password] {
+              width: 98%;
+              height: 20px;
+              padding: 12px;
+              margin: 4px;
+            }
+        
+         
+         /* Set a style for all buttons */
+         #log-in button {
+           background-color: rgb(16, 97, 19);
+           color: rgb(230, 230, 230);
+           height: 35px;
+           padding: 5px;
+           font-size: 20px;
+           border: none;
+           cursor: pointer;
+           width: 100%;
+           margin-top: 13px;
+           margin-left: 2px;
+           margin-bottom: 7px;
+           text-decoration: none;
+           box-shadow: black;
+         }
+         
+         #log-in  button:hover {
+           opacity: 0.8;
+         }
+         
+         /* Extra styles for the cancel button */
+          .cancelbtn {
+           width: auto;
+           padding: 10px 18px;
+           background-color: #c4352b;
+         }
+     
+
+         .modal2 {
+           display: none; /* Hidden by default */
+           position: fixed; /* Stay in place */
+           z-index: 1; /* Sit on top */
+           left: 0;
+           top: 0;
+           width: 100%; /* Full width */
+           height: 100%; /* Full height */
+           overflow: auto; /* Enable scroll if needed */
+           background-color: rgb(13, 133, 87); /* Fallback color */
+           padding-top: 60px;
+         }
+         
+         /* Modal Content/Box */
+         .modal-content2 {
+           background-color: #fefefe;
+           margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+           border: 1px solid rgba(88, 88, 88, 0.589);
+           width: 80%; /* Could be more or less, depending on screen size */
+         }
+         
+        
+     
+         </style>
+
+
+
+
+
+        <form class="modal-content2" action="/action_page" method="post">
+              <span onclick="modal.style.display='none'" class="close" title="Close Modal">&times;</span>
+        
+            <div class="container">
+              <label for="username"><b>Email</b></label>
+              <input type="email" placeholder="Enter email" name="username">
+        
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="password">
+                
+              <a href="user.html"><h2 style="padding:0px">Log-in</h2></a>
+            
+              <a href="#" style="float:right; padding: 5px; color: rgb(167, 19, 105);">Forgot Password?</a>
+
+            </div>
+
+          </form>
+
+
+
+    </div>
+
+    <script>
+      
+        var modal = document.getElementById('log-in');
+        
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var btn = document.getElementById('show-me');
+        window.onclick = function(event) {
+        if (event.target == btn) {
+            btn.style.display = "none";
+            
+        }
+        }
+
+   
+
+        </script>
+
+
+    </div>
+    <div id="form-1">
+        <h1>Book unique place to <br> stay and things to do</h1>
+        <label>WHERE</label>
+        <input type="text" placeholder="Anywhere">
+        <div id="lab">
+        <div id="lab1">
+        <label>CHECK-IN</label>
+        <input type="datetime" value="OCT 11, 2020"></div>
+        <div id="lab2">
+        <label>CHECK-OUT</label>
+        <input type="datetime" value="OCT 15,2020"></div></div>
+        <label>GUEST</label>
+        <input type="number" placeholder="1 guests">
+        <div id="lab3">
+        <a href="search.html"><input type="submit" value="Search"></a>
+      </div>
+
+     </div>
+     <div id="h1-tr">
+         <h2 style="padding-bottom: 0px;">Go Near</h2>
+         <p>Settle in somewhere new. Discover nearby <br> stays to live, work, or just relax.</p>
+         <a style="text-decoration: none;" href="search.html"><button style="font-size: 13px; padding: 10px;border: 1px solid black; border-radius: 8px; text-decoration: none; background-color: rgb(255, 255, 255);">Explore Now</button></a>
+     </div>
+
+</div>
+
+<h2 style="text-align: center; padding-bottom: 0;"> Book this room with 25% off</h2>
+
+    <div id="promo">
+        
+        <figure id="p1">
+            <img src="image/room1.jpg" alt="promtoional images">
+            <figcaption>120$</figcaption>
+        </figure>
+        
+        <figure id="p2">
+            <img src="image/room2.jpg" alt="promtoional images">
+            <figcaption>100$</figcaption>
+        </figure>
+        <figure id="p3">
+            <img src="image/room3.jpg" alt="promtoional images">
+            <figcaption>80$</figcaption>
+        </figure>
+
+
+    </div>
+
+    <div id="text-donate">
+      <h1>We embrace a world where<br> everyone belongs, and stand<br> with #BlackLivesMatter.</h1>
+      <button style="font-size: larger; padding: 10px;border: 1.5px solid black; border-radius: 8px; text-decoration: none; background-color: white;">Donate</button>
+      <p>"No one should have to encounter racism—no matter<br> who you are, where you’re from, who you love, or who<br> you lov you worship. Discrimination is not tolerated in our<br> you lov community. Which is why when you agree to book or<br> you lov host on Airbnb, you pledge not to tolerate it either."</p>
+     </div>
+  
+
+<footer>
+
+<div id="about">
+   <a href=""><h2>ABOUT</h2></a>
+   <a href=""><p>How Airbnb works</p></a>
+   <a href=""></a> <p>Newsroom</p> </a>
+   <a href=""></a> <p>Airbnb Plus</p></a>
+   <a href=""><p>Airbnb Luxe</p> </a>
+   <a href="">  <p>Hotel Tonight</p></a>
+   <a href="">  <p>Airbnb fow Work</p> </a>
+   <a href=""><p>Careers</p></a>
+</div>
+
+
+
+<div id="icon-menu">
+  <h3>Stay Connected</h3>
+  <a href="#">
+    <img
+      src="img/facebook.png"
+      width="56"
+      height="54"
+      alt="Facebook icon"
+      title="Go to Facebook."
+    />
+  </a>
+
+  <a href="#">
+    <img
+      src="img/Instagram.png"
+      width="54"
+      height="54"
+      alt="Instagram Icon"
+      title="Go to Instagram"
+    />
+  </a>
+
+  <a href="#\">
+    <img
+      src="img/twitter.png"
+      width="54"
+      height="54"
+      alt="Twitter icon"
+      title="Go to Twitter."
+    />
+  </a>
+
+  <a href="#">
+    <img
+      src="img/youtube.png"
+      width="55"
+      height="54"
+      alt="Youtube icon"
+      title="Go to Youtube."
+    />
+  </a>
+</div>
+
+<div id="last-f">
+  <p>All Rights Reserved &copy; 2020 Ali Rafi</p>
+</div>
+</footer>
+
+
+
+</body>
+</html>

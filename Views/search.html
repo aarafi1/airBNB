@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <style>
+
+      
+      .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-gap: 19px;
+          background-color: rgba(255, 255, 255, 0.897);
+          padding: 5px;
+        }
+        
+      .grid-container > div {
+          background-color: #fddfd1d3;
+          text-align: center;
+          padding: 5px;
+          font-size: 14px;
+          border-radius: 15px;
+        }
+        .grid-container img{
+          width: 430px;
+          height: 230px;
+          padding-top: 40px;
+        }
+      
+      
+      .room1 { grid-area: 1 / 3 / 2 / 4; }
+      .room2 { grid-area: 2 / 3 / 3 / 4; }
+      .room3 { grid-area: 1 / 1 / 2 / 2; }
+      .room4 { grid-area: 1 / 2 / 2 / 3; }
+      .room5 { grid-area: 2 / 1 / 3 / 2; }
+      .room6 { grid-area: 2 / 2 / 3 / 3; }
+      
+      
+#header{
+    display: inline-block;
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: rgba(95, 10, 10, 0.637);
+    
+   
+}
+
+#header img{
+    float: left;
+    padding: 30px;
+    padding-right: 27%;
+}
+
+#header a{
+    display: block;
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    left: 100px;
+    color: ivory;
+   
+}
+#header a:hover{
+    background-color: rgb(231, 127, 127);
+    color: black;
+    border-radius: 25px;
+}
+
+#header a.a1{
+    float: right;
+}
+
+#header a.a2{
+    float: right;
+}
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img style="width: 75px; height: 50px;" src="image/logo.png" alt="airbnb.com">
+        <a href="index.html"><h2>Place to stay</h2></a>
+        <a href="roompage.html"><h2>Explore Room</h2></a>
+        <a href="#"><h2>Online Experiences</h2></a>
+
+        <a href="user.html"><h2>Admin</h2></a>      
+        <a href="user.html"><h2>Go To Dashboard</h2></a>
+        <a href="user.html"><h2>Create Post</h2></a>
+    </div>
+    <div class="grid-container">
+
+        <div id="room1">
+            <img src="image/room6.jpg" alt="room1">
+            <p style="font-weight: bold;">ENTIRE APARTMENT - LISBON</p>
+            <p>Chiado Loft 7 with Patio!</p>
+            <P>$130 CAD/night</P>
+            <p><span>*</span>4.87(363) - Superhost</p>
+
+        </div>
+        <div id="room2">
+            <img src="image/room1.jpg" alt="room2">
+            <p style="font-weight: bold;">ENTIRE HOUSE - LA</p>
+            <p>Feel the party!</p>
+            <P>$139 CAD/night</P>
+            <p><span>*</span>4.88(363) - Superhost</p>
+
+        </div>
+        <div id="room3">
+            <img src="image/room2.jpg" alt="room3">
+            <p style="font-weight: bold;">ENTIRE APARTMENT - TORONTO</p>
+            <p>Chiado Loft 7 with Patio!</p>
+            <P>$190 CAD/night</P>
+            <p><span>*</span>4.80(363) - Superhost</p>
+        </div>
+        <div id="room4">
+            <img src="image/room3.jpg" alt="room4">
+            <p style="font-weight: bold;">ENTIRE APARTMENT - NEW YORK</p>
+            <p>Chiado Loft 7 with Patio!</p>
+            <P>$240 CAD/night</P>
+            <p><span>*</span>4.87(363) - Superhost</p>
+
+        </div>
+        <div id="room5">
+            <img src="image/room4.jpg" alt="room5">
+            <p style="font-weight: bold;">ENTIRE HOUSE - VANCOUVER</p>
+            <p>Beautiful British Columbia!</p>
+            <P>$130 CAD/night</P>
+            <p><span>*</span>4.87(363) - Superhost</p>
+
+        </div>
+        <div id="room6">
+            <img src="image/room5.jpg" alt="room6">
+            <p style="font-weight: bold;">ENTIRE APARTMENT - LISBON</p>
+            <p>Chiado Loft 7 with Patio!</p>
+            <P>$130 CAD/night</P>
+            <p><span>*</span>4.87(363) - Superhost</p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
